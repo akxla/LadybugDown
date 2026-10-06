@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Photo Downloader</title>
+</head>
+
+<body>
+
+    <h1>Download Photo</h1>
+
+    <img id="photo" src="ladybug.png" width="300">
+
+    <br><br>
+
+    <button onclick="downloadPhoto()">Download Photo</button>
+
+    <script>
+        function downloadPhoto() {
+            const link = document.createElement("a");
+
+            link.href = document.getElementById("photo").src;
+            link.download = "ladybug.png";
+
+            link.click();
+        }
+    </script>
+
+</body>
+</html>
